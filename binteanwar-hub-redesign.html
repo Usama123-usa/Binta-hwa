@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO: Optimized meta title & description -->
+  <title>Bint e Anwar Hub – Premium Beauty, Digital Courses & Expert Services</title>
+  <meta name="description" content="Discover 100% chemical-free beauty products, high-income digital skill courses, motivational books, and expert branding services. Trusted by 12,000+ happy customers." />
+  <meta name="keywords" content="organic beauty products, digital marketing courses, SEO course, motivational books, branding services, Pakistan online store" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://showcase.nextstepsols.com/" />
+
+  <!-- ✅ OG Tags -->
+  <meta property="og:title" content="Bint e Anwar Hub – Premium Beauty, Courses & Services" />
+  <meta property="og:description" content="Elevate your life with luxury skincare, actionable digital courses, and professional branding services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://showcase.nextstepsols.com/" />
+
+  <!-- ✅ Fonts: Cormorant Garamond (luxury display) + DM Sans (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bint e Anwar Hub",
+    "url": "https://showcase.nextstepsols.com",
+    "description": "Premium beauty products, digital courses, motivational books, and branding services.",
+    "email": "binteanwar31@gmail.com",
+    "sameAs": [
+      "https://www.facebook.com/samanbinteanwar",
+      "https://www.instagram.com/saman_anwar90",
+      "https://www.youtube.com/@binteanwarhub"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============================
+       CSS DESIGN SYSTEM
+    ============================ */
+    :root {
+      --ivory:      #FAF8F4;
+      --cream:      #F3EFE6;
+      --warm-white: #FEFCF9;
+      --charcoal:   #1C1917;
+      --dark:       #2C2825;
+      --mid:        #6B6459;
+      --light:      #A89F94;
+      --gold:       #C8A96E;
+      --gold-light: #E2C98A;
+      --gold-deep:  #9A7A45;
+      --sage:       #8A9E8C;
+      --blush:      #E8C5B0;
+      --radius-sm:  6px;
+      --radius-md:  14px;
+      --radius-lg:  28px;
+      --shadow-sm:  0 2px 12px rgba(28,25,23,.07);
+      --shadow-md:  0 8px 32px rgba(28,25,23,.10);
+      --shadow-lg:  0 20px 60px rgba(28,25,23,.14);
+      --trans:      all .35s cubic-bezier(.4,0,.2,1);
+      --serif:      'Cormorant Garamond', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--warm-white);
+      color: var(--charcoal);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 99px; }
+
+    /* ============================
+       ANNOUNCEMENT BAR
+    ============================ */
+    .ann-bar {
+      background: var(--charcoal);
+      color: var(--gold-light);
+      font-size: .75rem;
+      font-family: var(--sans);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 9px 16px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ann-bar__track {
+      display: flex;
+      gap: 3rem;
+      width: max-content;
+      animation: ticker 28s linear infinite;
+    }
+    .ann-bar span { white-space: nowrap; }
+    .ann-bar span + span::before {
+      content: '✦';
+      margin-right: 3rem;
+      color: var(--gold);
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================
+       NAVBAR
+    ============================ */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(254,252,249,.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(200,169,110,.15);
+      transition: box-shadow .3s ease;
+    }
+    .navbar.scrolled { box-shadow: var(--shadow-md); }
+
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .nav-logo__primary {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      letter-spacing: .01em;
+    }
+    .nav-logo__sub {
+      font-size: .6rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--mid);
+      position: relative;
+      transition: color .25s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-icon-btn {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,169,110,.25);
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--mid);
+      transition: var(--trans);
+      font-size: .9rem;
+    }
+    .nav-icon-btn:hover {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+    }
+    .nav-cta {
+      padding: 9px 22px;
+      background: var(--charcoal);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: var(--trans);
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--charcoal);
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+
+    /* ============================
+       HERO SECTION
+    ============================ */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 110px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ivory);
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 75% 50%, rgba(200,169,110,.09) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(138,158,140,.07) 0%, transparent 55%);
+    }
+    /* Decorative grain overlay */
+    .hero__grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: .4;
+    }
+
+    .hero__inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 80px 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 1.4rem;
+    }
+    .hero__kicker-line {
+      width: 30px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero__title {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 1.4rem;
+    }
+    .hero__title em {
+      font-style: italic;
+      color: var(--gold-deep);
+    }
+
+    .hero__sub {
+      font-size: 1rem;
+      color: var(--mid);
+      max-width: 440px;
+      line-height: 1.75;
+      margin-bottom: 2.4rem;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 14px 32px;
+      background: var(--charcoal);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: var(--trans);
+      border: 2px solid var(--charcoal);
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--charcoal);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200,169,110,.3);
+    }
+    .btn-primary svg { transition: transform .25s; }
+    .btn-primary:hover svg { transform: translateX(3px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--charcoal);
+      border: 2px solid rgba(200,169,110,.35);
+      border-radius: var(--radius-sm);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: var(--trans);
+      cursor: pointer;
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold-deep);
+    }
+
+    .hero__trust {
+      display: flex;
+      gap: 1.8rem;
+      margin-top: 2.8rem;
+      flex-wrap: wrap;
+    }
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      color: var(--mid);
+      font-weight: 500;
+    }
+    .trust-pill__icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(200,169,110,.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem;
+    }
+
+    /* Hero visual side */
+    .hero__visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero__card-stack {
+      position: relative;
+      width: 340px;
+      height: 440px;
+    }
+    .hero__card {
+      position: absolute;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero__card--main {
+      width: 280px; height: 380px;
+      top: 30px; left: 30px;
+      background: linear-gradient(145deg, var(--cream), var(--blush));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .hero__card--bg {
+      width: 260px; height: 360px;
+      top: 0; left: 0;
+      background: linear-gradient(145deg, rgba(200,169,110,.15), rgba(138,158,140,.12));
+      border: 1px solid rgba(200,169,110,.2);
+      z-index: 0;
+    }
+    .hero__card--main { z-index: 1; }
+    .hero__card-emoji {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .hero__card-label {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero__card-sub {
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+    }
+
+    .hero__badge {
+      position: absolute;
+      bottom: 0; right: -10px;
+      background: var(--charcoal);
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: .75rem;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+    }
+    .hero__badge-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--gold-light);
+    }
+
+    /* ============================
+       STATS STRIP
+    ============================ */
+    .stats-strip {
+      background: var(--charcoal);
+      padding: 32px 28px;
+    }
+    .stats-strip__inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .stat-item { position: relative; }
+    .stat-item + .stat-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 15%; height: 70%;
+      width: 1px;
+      background: rgba(200,169,110,.2);
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+    .stat-label {
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* ============================
+       CATEGORY TABS
+    ============================ */
+    .categories {
+      padding: 80px 28px 48px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-kicker {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: .7rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1.2;
+    }
+    .section-title em { font-style: italic; color: var(--gold-deep); }
+    .section-subtitle {
+      font-size: .92rem;
+      color: var(--mid);
+      max-width: 480px;
+      margin: .8rem auto 0;
+      line-height: 1.7;
+    }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+    .cat-card {
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--trans);
+      border: 1px solid rgba(200,169,110,.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .35s;
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .cat-card:hover::before { opacity: 1; }
+
+    .cat-card--beauty { background: linear-gradient(145deg, #FAF0E8, #F5E6D6); }
+    .cat-card--beauty::before { background: linear-gradient(145deg, #F5E2CC, #EED4BC); }
+
+    .cat-card--courses { background: linear-gradient(145deg, #EEF2F0, #E3EDE5); }
+    .cat-card--courses::before { background: linear-gradient(145deg, #E4EDE6, #D6E5D8); }
+
+    .cat-card--books { background: linear-gradient(145deg, #F0EEF6, #E8E4F2); }
+    .cat-card--books::before { background: linear-gradient(145deg, #E8E4F2, #DDD7EE); }
+
+    .cat-card--services { background: linear-gradient(145deg, #F6F2EE, #EDE4DA); }
+    .cat-card--services::before { background: linear-gradient(145deg, #EDE4DA, #E2D5C7); }
+
+    .cat-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    .cat-name {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: .4rem;
+    }
+    .cat-desc {
+      font-size: .78rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .cat-arrow {
+      margin-top: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+    }
+
+    /* ============================
+       PRODUCTS GRID
+    ============================ */
+    .products-section {
+      padding: 20px 28px 80px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .products-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .products-title {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+    .view-all-link {
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      transition: gap .25s;
+    }
+    .view-all-link:hover { gap: .7rem; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.4rem;
+    }
+
+    .product-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(200,169,110,.1);
+      transition: var(--trans);
+      cursor: pointer;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(200,169,110,.25);
+    }
+
+    .product-image {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--cream);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-image__placeholder {
+      font-size: 3rem;
+      opacity: .35;
+    }
+    .product-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .product-wishlist {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: var(--trans);
+      opacity: 0;
+    }
+    .product-card:hover .product-wishlist { opacity: 1; }
+    .product-wishlist:hover { background: var(--gold); color: #fff; }
+
+    .product-body {
+      padding: 1.1rem;
+    }
+    .product-category {
+      font-size: .63rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    .product-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1.35;
+      margin-bottom: .6rem;
+    }
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .price-current {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .price-original {
+      font-size: .82rem;
+      color: var(--light);
+      text-decoration: line-through;
+    }
+    .price-save {
+      font-size: .65rem;
+      background: rgba(200,169,110,.15);
+      color: var(--gold-deep);
+      padding: 2px 7px;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+
+    .product-add-btn {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 9px;
+      background: var(--charcoal);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: .73rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--trans);
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    .product-card:hover .product-add-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product-add-btn:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    /* ============================
+       WHY US / TRUST SECTION
+    ============================ */
+    .why-us {
+      background: var(--cream);
+      padding: 80px 28px;
+    }
+    .why-us__inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-top: 3.5rem;
+    }
+    .why-text-col {}
+    .why-feature {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .why-feature:last-child { margin-bottom: 0; }
+    .why-feature__icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: rgba(200,169,110,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .why-feature__content {}
+    .why-feature__title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: .3rem;
+    }
+    .why-feature__desc {
+      font-size: .84rem;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+
+    .why-visual-col {
+      position: relative;
+    }
+    .why-card-big {
+      background: var(--charcoal);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-card-big::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(200,169,110,.08);
+    }
+    .why-card-big__label {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .why-card-big__title {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .why-card-big__title em { font-style: italic; color: var(--gold-light); }
+    .why-card-big__body {
+      font-size: .84rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+    .why-card-big .btn-primary {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--charcoal);
+    }
+    .why-card-big .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    .why-mini-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+      margin-top: 1rem;
+    }
+    .why-mini-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .why-mini-card__num {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--gold-deep);
+      line-height: 1;
+    }
+    .why-mini-card__label {
+      font-size: .7rem;
+      color: var(--mid);
+      margin-top: .3rem;
+    }
+
+    /* ============================
+       COURSES SECTION
+    ============================ */
+    .courses-section {
+      padding: 80px 28px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .course-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(200,169,110,.12);
+      background: #fff;
+      transition: var(--trans);
+    }
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .course-card__top {
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .course-card--dm .course-card__top   { background: linear-gradient(135deg, #EDF2F0 0%, #D9E8DB 100%); }
+    .course-card--yt .course-card__top   { background: linear-gradient(135deg, #FBF0EE 0%, #F2DDD8 100%); }
+    .course-card--des .course-card__top  { background: linear-gradient(135deg, #EEF0F8 0%, #DDE1F4 100%); }
+
+    .course-emoji { font-size: 2.2rem; margin-bottom: 1rem; }
+    .course-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: .3rem;
+    }
+    .course-level {
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+    }
+    .course-card__body {
+      padding: 1.2rem 1.5rem;
+    }
+    .course-desc {
+      font-size: .83rem;
+      color: var(--mid);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .course-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .course-price { font-size: 1.1rem; font-weight: 600; color: var(--charcoal); }
+    .course-price s { font-size: .85rem; color: var(--light); font-weight: 400; margin-right: .3rem; }
+    .course-enroll {
+      padding: 7px 18px;
+      background: var(--charcoal);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: var(--trans);
+      border: none;
+      cursor: pointer;
+    }
+    .course-enroll:hover { background: var(--gold); color: var(--charcoal); }
+
+    /* ============================
+       TESTIMONIALS
+    ============================ */
+    .testimonials {
+      background: var(--charcoal);
+      padding: 80px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '"';
+      position: absolute;
+      top: -40px; left: 5%;
+      font-family: var(--serif);
+      font-size: 30rem;
+      color: rgba(200,169,110,.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .testimonials__inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .testimonials .section-kicker { color: var(--gold); }
+    .testimonials .section-title { color: #fff; }
+    .testimonials .section-title em { color: var(--gold-light); }
+    .testimonials .section-subtitle { color: rgba(255,255,255,.45); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 3rem;
+    }
+    .testi-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(200,169,110,.15);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      transition: var(--trans);
+    }
+    .testi-card:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(200,169,110,.3);
+    }
+    .testi-stars {
+      color: var(--gold);
+      font-size: .9rem;
+      letter-spacing: .15em;
+      margin-bottom: .9rem;
+    }
+    .testi-text {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,.8);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+      font-style: italic;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+    .testi-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--blush));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-size: .82rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .testi-role {
+      font-size: .7rem;
+      color: rgba(255,255,255,.4);
+    }
+
+    /* ============================
+       SERVICES SECTION
+    ============================ */
+    .services-section {
+      padding: 80px 28px;
+      background: var(--ivory);
+    }
+    .services-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      border: 1px solid rgba(200,169,110,.15);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      background: #fff;
+      transition: var(--trans);
+      cursor: pointer;
+      group: true;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(200,169,110,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      transition: var(--trans);
+    }
+    .service-card:hover .service-icon { background: var(--gold); }
+    .service-name {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: .5rem;
+    }
+    .service-desc {
+      font-size: .83rem;
+      color: var(--mid);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+    .service-link {
+      font-size: .73rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      transition: gap .25s;
+    }
+    .service-card:hover .service-link { gap: .7rem; }
+
+    /* ============================
+       NEWSLETTER
+    ============================ */
+    .newsletter {
+      padding: 80px 28px;
+      background: var(--cream);
+    }
+    .newsletter__inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .newsletter__icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .newsletter__form {
+      display: flex;
+      gap: .8rem;
+      margin-top: 2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .newsletter__input {
+      flex: 1;
+      padding: 13px 18px;
+      border: 1px solid rgba(200,169,110,.3);
+      border-radius: var(--radius-sm);
+      font-family: var(--sans);
+      font-size: .85rem;
+      background: #fff;
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color .25s;
+    }
+    .newsletter__input:focus { border-color: var(--gold); }
+    .newsletter__input::placeholder { color: var(--light); }
+    .newsletter__note {
+      font-size: .72rem;
+      color: var(--light);
+      margin-top: .8rem;
+    }
+
+    /* ============================
+       FOOTER
+    ============================ */
+    footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,.6);
+      padding: 60px 28px 32px;
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .footer-brand__name {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: .5rem;
+    }
+    .footer-brand__tagline {
+      font-size: .78rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.45);
+      max-width: 260px;
+      margin-bottom: 1.4rem;
+    }
+    .footer-socials {
+      display: flex;
+      gap: .7rem;
+      flex-wrap: wrap;
+    }
+    .footer-social {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem;
+      color: rgba(255,255,255,.5);
+      transition: var(--trans);
+      cursor: pointer;
+    }
+    .footer-social:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--charcoal);
+    }
+    .footer-col__title {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .footer-links a {
+      font-size: .82rem;
+      color: rgba(255,255,255,.45);
+      transition: color .25s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      margin-bottom: .7rem;
+    }
+    .footer-contact-item:last-child { margin-bottom: 0; }
+    .footer-contact-icon {
+      font-size: .85rem;
+      color: var(--gold);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .footer-contact-text {
+      font-size: .8rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: .75rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-legal a {
+      font-size: .73rem;
+      color: rgba(255,255,255,.3);
+      transition: color .25s;
+    }
+    .footer-legal a:hover { color: var(--gold-light); }
+
+    /* ============================
+       WHATSAPP FAB
+    ============================ */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      cursor: pointer;
+      z-index: 900;
+      transition: var(--trans);
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37,211,102,.5);
+    }
+
+    /* ============================
+       MOBILE MENU
+    ============================ */
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: -100%;
+      width: min(320px, 85vw);
+      height: 100vh;
+      background: var(--warm-white);
+      z-index: 1000;
+      transition: right .4s cubic-bezier(.4,0,.2,1);
+      box-shadow: -8px 0 40px rgba(0,0,0,.12);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-menu.open { right: 0; }
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(28,25,23,.5);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s;
+    }
+    .mobile-overlay.open { opacity: 1; pointer-events: all; }
+
+    .mobile-menu__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+    .mobile-close {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: none;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+    }
+    .mobile-nav-links {
+      list-style: none;
+      flex: 1;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid rgba(200,169,110,.12); }
+    .mobile-nav-links a {
+      display: block;
+      padding: 1rem 0;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--charcoal);
+      transition: color .25s;
+    }
+    .mobile-nav-links a:hover { color: var(--gold-deep); }
+    .mobile-menu__cta {
+      margin-top: 2rem;
+    }
+    .mobile-menu__cta .btn-primary { width: 100%; justify-content: center; }
+
+    /* ============================
+       ANIMATIONS
+    ============================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .hero__kicker  { animation: fadeUp .6s ease both; }
+    .hero__title   { animation: fadeUp .7s .1s ease both; }
+    .hero__sub     { animation: fadeUp .7s .2s ease both; }
+    .hero__actions { animation: fadeUp .7s .3s ease both; }
+    .hero__trust   { animation: fadeUp .7s .4s ease both; }
+    .hero__card-stack { animation: fadeUp .9s .2s ease both; }
+    .hero__badge   { animation: float 4s ease-in-out infinite 1s; }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger delays for grids */
+    .reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
+    .reveal-stagger > *:nth-child(2) { transition-delay: .1s; }
+    .reveal-stagger > *:nth-child(3) { transition-delay: .2s; }
+    .reveal-stagger > *:nth-child(4) { transition-delay: .3s; }
+
+    /* ============================
+       RESPONSIVE
+    ============================ */
+    @media (max-width: 1024px) {
+      .cat-grid       { grid-template-columns: repeat(2, 1fr); }
+      .product-grid   { grid-template-columns: repeat(2, 1fr); }
+      .courses-grid   { grid-template-columns: repeat(2, 1fr); }
+      .services-grid  { grid-template-columns: repeat(2, 1fr); }
+      .footer-top     { grid-template-columns: 1fr 1fr; }
+      .why-grid       { gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero__inner {
+        grid-template-columns: 1fr;
+        padding: 48px 28px 56px;
+        text-align: center;
+      }
+      .hero__sub { margin-left: auto; margin-right: auto; }
+      .hero__actions { justify-content: center; }
+      .hero__trust { justify-content: center; }
+      .hero__visual { display: none; }
+      .stats-strip__inner { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+      .stat-item:nth-child(2)::before { display: none; }
+      .stat-item:nth-child(3)::before { display: none; }
+      .stat-item:nth-child(4)::before { display: none; }
+      .stat-item + .stat-item::before { display: none; }
+      .cat-grid     { grid-template-columns: repeat(2, 1fr); }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .courses-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid     { grid-template-columns: 1fr; }
+      .footer-top   { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .newsletter__form { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .cat-grid     { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; }
+      .hero__trust  { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ ANNOUNCEMENT BAR -->
+  <div class="ann-bar" role="banner" aria-label="Site announcements">
+    <div class="ann-bar__track">
+      <span>✦ 4.9/5 Average Client Rating</span>
+      <span>100% Chemical-Free Products</span>
+      <span>12,000+ Happy Customers</span>
+      <span>Award-Winning Digital Strategies</span>
+      <span>Secure Checkout — 100% Protected</span>
+      <span>✦ 4.9/5 Average Client Rating</span>
+      <span>100% Chemical-Free Products</span>
+      <span>12,000+ Happy Customers</span>
+      <span>Award-Winning Digital Strategies</span>
+      <span>Secure Checkout — 100% Protected</span>
+    </div>
+  </div>
+
+  <!-- ✅ MOBILE OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()" aria-hidden="true"></div>
+
+  <!-- ✅ MOBILE MENU -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <div class="mobile-menu__header">
+      <div class="nav-logo">
+        <span class="nav-logo__primary">Bint e Anwar</span>
+        <span class="nav-logo__sub">Premium Hub</span>
+      </div>
+      <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#beauty">Beauty</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__cta">
+      <a href="https://showcase.nextstepsols.com/store/" class="btn-primary">
+        Shop Now
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ✅ NAVBAR: Semantic, sticky, SEO-friendly -->
+  <header role="banner">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="https://showcase.nextstepsols.com/" class="nav-logo" aria-label="Bint e Anwar Hub Homepage">
+          <span class="nav-logo__primary">Bint e Anwar</span>
+          <span class="nav-logo__sub">Premium Hub</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Shop</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <button class="nav-icon-btn" aria-label="Search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="nav-icon-btn" aria-label="Wishlist">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <button class="nav-icon-btn" aria-label="Shopping cart, 0 items">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </button>
+          <a href="https://showcase.nextstepsols.com/store/" class="nav-cta" aria-label="Shop all products">Shop Now</a>
+          <button class="hamburger" id="hamburger" onclick="openMobileMenu()" aria-label="Open mobile menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+
+    <!-- ✅ HERO SECTION: H1 for SEO -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <!-- Left: Text -->
+        <div class="hero__text">
+          <div class="hero__kicker" aria-label="Category">
+            <span class="hero__kicker-line" aria-hidden="true"></span>
+            Premium Personal Care & Digital Growth
+          </div>
+          <!-- ✅ SEO: Single H1 per page -->
+          <h1 class="hero__title">
+            Elevate Your <em>Beauty,</em><br>
+            Skills & Brand.
+          </h1>
+          <p class="hero__sub">
+            Discover 100% chemical-free luxury beauty products, high-income digital skill courses, and expert branding services — all under one roof.
+          </p>
+          <div class="hero__actions">
+            <a href="https://showcase.nextstepsols.com/store/" class="btn-primary" aria-label="Explore all products and courses">
+              Explore Collections
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#categories" class="btn-ghost">See Categories</a>
+          </div>
+          <div class="hero__trust">
+            <div class="trust-pill">
+              <div class="trust-pill__icon" aria-hidden="true">⭐</div>
+              <span>4.9/5 Rating</span>
+            </div>
+            <div class="trust-pill">
+              <div class="trust-pill__icon" aria-hidden="true">🛡️</div>
+              <span>100% Chemical-Free</span>
+            </div>
+            <div class="trust-pill">
+              <div class="trust-pill__icon" aria-hidden="true">👥</div>
+              <span>12K+ Customers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__card-stack">
+            <div class="hero__card hero__card--bg"></div>
+            <div class="hero__card hero__card--main">
+              <div class="hero__card-emoji">✨</div>
+              <div class="hero__card-label">Premium<br>Collections</div>
+              <div class="hero__card-sub">Est. 2024</div>
+            </div>
+            <div class="hero__badge">
+              <div class="hero__badge-num">12K+</div>
+              <div style="font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px;">Happy Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ STATS STRIP -->
+    <section class="stats-strip" aria-label="Key statistics">
+      <div class="stats-strip__inner reveal-stagger">
+        <div class="stat-item">
+          <div class="stat-num">12K+</div>
+          <div class="stat-label">Happy Students</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Chemical-Free</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Products & Courses</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ CATEGORIES SECTION -->
+    <section class="categories" id="categories" aria-labelledby="cat-heading">
+      <div class="section-header reveal">
+        <p class="section-kicker">What We Offer</p>
+        <h2 class="section-title" id="cat-heading">One Hub. <em>Infinite</em> Value.</h2>
+        <p class="section-subtitle">From your morning skincare ritual to mastering digital income — we have you covered.</p>
+      </div>
+      <div class="cat-grid reveal-stagger">
+        <a href="https://showcase.nextstepsols.com/store/" class="cat-card cat-card--beauty reveal" aria-label="Beauty and Lifestyle products">
+          <div class="cat-icon" aria-hidden="true">🌸</div>
+          <h3 class="cat-name">Beauty & Lifestyle</h3>
+          <p class="cat-desc">Organic soaps, luxury perfumes, hair oils, and face wash — chemical-free and skin-loving.</p>
+          <div class="cat-arrow">Shop Beauty →</div>
+        </a>
+        <a href="https://showcase.nextstepsols.com/store/" class="cat-card cat-card--courses reveal" aria-label="Digital Courses">
+          <div class="cat-icon" aria-hidden="true">🎓</div>
+          <h3 class="cat-name">Digital Courses</h3>
+          <p class="cat-desc">YouTube automation, SEO, digital marketing, UI/UX — learn the skills that pay in 2026.</p>
+          <div class="cat-arrow">Browse Courses →</div>
+        </a>
+        <a href="https://showcase.nextstepsols.com/store/" class="cat-card cat-card--books reveal" aria-label="Motivational Books">
+          <div class="cat-icon" aria-hidden="true">📚</div>
+          <h3 class="cat-name">Motivational Books</h3>
+          <p class="cat-desc">Curated life-changing books designed to transform your mindset and fuel success.</p>
+          <div class="cat-arrow">Explore Books →</div>
+        </a>
+        <a href="https://showcase.nextstepsols.com/store/" class="cat-card cat-card--services reveal" aria-label="Professional Services">
+          <div class="cat-icon" aria-hidden="true">🎨</div>
+          <h3 class="cat-name">Expert Services</h3>
+          <p class="cat-desc">SEO, branding, website design, corporate identity — build a brand that converts.</p>
+          <div class="cat-arrow">Get a Quote →</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ BEAUTY PRODUCTS SECTION -->
+    <section class="products-section" id="beauty" aria-labelledby="beauty-heading">
+      <div class="products-header reveal">
+        <h2 class="products-title" id="beauty-heading">Beauty & <em style="font-style:italic;font-family:var(--serif);color:var(--gold-deep)">Care</em></h2>
+        <a href="https://showcase.nextstepsols.com/store/" class="view-all-link" aria-label="View all beauty products">View All Products →</a>
+      </div>
+      <div class="product-grid reveal-stagger">
+
+        <!-- Product 1 -->
+        <article class="product-card reveal" itemscope itemtype="https://schema.org/Product">
+          <div class="product-image">
+            <div class="product-image__placeholder" aria-hidden="true">🌸</div>
+            <span class="product-badge" aria-label="Sale">Sale</span>
+            <button class="product-wishlist" aria-label="Add Sun-Kissed Citrus Fragrance to wishlist">♡</button>
+          </div>
+          <div class="product-body">
+            <p class="product-category" aria-label="Category: Fragrance">Fragrance</p>
+            <h3 class="product-name" itemprop="name">
+              <a href="https://showcase.nextstepsols.com/product/sun-kissed-citrus-signature-fragrance-daily-wear/">Sun-Kissed Citrus Signature Fragrance</a>
+            </h3>
+            <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span class="price-current" itemprop="price" content="39">$39</span>
+              <span class="price-original" aria-label="Original price $49">$49</span>
+              <span class="price-save" aria-label="Save 20%">Save 20%</span>
+            </div>
+            <button class="product-add-btn" aria-label="Add Sun-Kissed Citrus Fragrance to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card reveal" itemscope itemtype="https://schema.org/Product">
+          <div class="product-image">
+            <div class="product-image__placeholder" aria-hidden="true">🌿</div>
+            <span class="product-badge" aria-label="Sale">Sale</span>
+            <button class="product-wishlist" aria-label="Add Tea Tree Oil to wishlist">♡</button>
+          </div>
+          <div class="product-body">
+            <p class="product-category">Hair Care</p>
+            <h3 class="product-name" itemprop="name">
+              <a href="https://showcase.nextstepsols.com/product/tea-tree-rosemary-anti-dandruff-scalp-soothing-oil/">Tea Tree & Rosemary Anti-Dandruff Oil</a>
+            </h3>
+            <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span class="price-current" itemprop="price" content="12">$12</span>
+              <span class="price-original" aria-label="Original price $15">$15</span>
+              <span class="price-save">Save 20%</span>
+            </div>
+            <button class="product-add-btn" aria-label="Add Tea Tree Oil to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card reveal" itemscope itemtype="https://schema.org/Product">
+          <div class="product-image">
+            <div class="product-image__placeholder" aria-hidden="true">🌙</div>
+            <span class="product-badge">Sale</span>
+            <button class="product-wishlist" aria-label="Add Midnight Bloom Fragrance to wishlist">♡</button>
+          </div>
+          <div class="product-body">
+            <p class="product-category">Fragrance</p>
+            <h3 class="product-name" itemprop="name">
+              <a href="https://showcase.nextstepsols.com/product/midnight-bloom-signature-fragrance-long-lasting/">Midnight Bloom Signature Fragrance</a>
+            </h3>
+            <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span class="price-current" itemprop="price" content="45">$45</span>
+              <span class="price-original">$49</span>
+              <span class="price-save">Save 8%</span>
+            </div>
+            <button class="product-add-btn" aria-label="Add Midnight Bloom Fragrance to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card reveal" itemscope itemtype="https://schema.org/Product">
+          <div class="product-image">
+            <div class="product-image__placeholder" aria-hidden="true">💧</div>
+            <span class="product-badge">Sale</span>
+            <button class="product-wishlist" aria-label="Add Face Wash to wishlist">♡</button>
+          </div>
+          <div class="product-body">
+            <p class="product-category">Skincare</p>
+            <h3 class="product-name" itemprop="name">
+              <a href="https://showcase.nextstepsols.com/product/gentle-balancing-face-wash-for-all-skin-types/">Gentle Balancing Face Wash</a>
+            </h3>
+            <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span class="price-current" itemprop="price" content="40">$40</span>
+              <span class="price-original">$49</span>
+              <span class="price-save">Save 18%</span>
+            </div>
+            <button class="product-add-btn" aria-label="Add Face Wash to cart">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ✅ WHY CHOOSE US -->
+    <section class="why-us" id="about" aria-labelledby="why-heading">
+      <div class="why-us__inner">
+        <div class="section-header reveal">
+          <p class="section-kicker">Our Promise</p>
+          <h2 class="section-title" id="why-heading">Crafted With <em>Purpose.</em></h2>
+          <p class="section-subtitle">Everything we do bridges classic craftsmanship with digital innovation.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-text-col">
+            <div class="why-feature reveal">
+              <div class="why-feature__icon" aria-hidden="true">🌿</div>
+              <div class="why-feature__content">
+                <h3 class="why-feature__title">100% Natural Ingredients</h3>
+                <p class="why-feature__desc">Every product in our beauty line is formulated without harmful chemicals — safe for all skin types and ethically sourced.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal">
+              <div class="why-feature__icon" aria-hidden="true">🎓</div>
+              <div class="why-feature__content">
+                <h3 class="why-feature__title">Expert-Led Digital Education</h3>
+                <p class="why-feature__desc">Our courses are designed by industry practitioners with proven results — not theory. Real skills for real income.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal">
+              <div class="why-feature__icon" aria-hidden="true">🏆</div>
+              <div class="why-feature__content">
+                <h3 class="why-feature__title">Award-Winning Strategies</h3>
+                <p class="why-feature__desc">Our digital marketing and branding services follow strategies recognized in the industry for delivering measurable results.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal">
+              <div class="why-feature__icon" aria-hidden="true">🔒</div>
+              <div class="why-feature__content">
+                <h3 class="why-feature__title">Secure & Trusted Shopping</h3>
+                <p class="why-feature__desc">End-to-end encrypted checkout, secure payments, and a hassle-free return policy — your satisfaction is guaranteed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="why-visual-col reveal">
+            <div class="why-card-big">
+              <p class="why-card-big__label">Digital Excellence</p>
+              <h3 class="why-card-big__title">Ready to <em>Grow<br>Your Brand?</em></h3>
+              <p class="why-card-big__body">From professional website design to full-scale SEO strategies, our expert team builds brands that attract, convert, and retain customers.</p>
+              <a href="https://showcase.nextstepsols.com/store/" class="btn-primary">
+                Explore Services
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="why-mini-cards">
+              <div class="why-mini-card">
+                <div class="why-mini-card__num">12K+</div>
+                <div class="why-mini-card__label">Happy Students</div>
+              </div>
+              <div class="why-mini-card">
+                <div class="why-mini-card__num">4.9★</div>
+                <div class="why-mini-card__label">Client Rating</div>
+              </div>
+              <div class="why-mini-card">
+                <div class="why-mini-card__num">50+</div>
+                <div class="why-mini-card__label">Products & Courses</div>
+              </div>
+              <div class="why-mini-card">
+                <div class="why-mini-card__num">100%</div>
+                <div class="why-mini-card__label">Chemical-Free</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ COURSES SECTION -->
+    <section class="courses-section" id="courses" aria-labelledby="courses-heading">
+      <div class="section-header reveal">
+        <p class="section-kicker">Learn & Earn</p>
+        <h2 class="section-title" id="courses-heading">Master <em>High-Income</em> Skills.</h2>
+        <p class="section-subtitle">Premium courses designed to turn you from beginner to profitable professional.</p>
+      </div>
+      <div class="courses-grid reveal-stagger" style="margin-top:2.5rem">
+
+        <article class="course-card course-card--dm reveal" itemscope itemtype="https://schema.org/Course">
+          <div class="course-card__top">
+            <div class="course-emoji" aria-hidden="true">📊</div>
+            <h3 class="course-title" itemprop="name">Digital Marketing Fundamentals</h3>
+            <p class="course-level">Beginner → Advanced • 2026 Edition</p>
+          </div>
+          <div class="course-card__body">
+            <p class="course-desc">Master SEO, social media marketing, paid ads, email campaigns, and analytics with actionable 2026 strategies.</p>
+            <div class="course-meta">
+              <div class="course-price"><s>$59</s> $50</div>
+              <button class="course-enroll" aria-label="Enroll in Digital Marketing course">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card course-card--yt reveal" itemscope itemtype="https://schema.org/Course">
+          <div class="course-card__top">
+            <div class="course-emoji" aria-hidden="true">▶️</div>
+            <h3 class="course-title" itemprop="name">YouTube Channel Mastery</h3>
+            <p class="course-level">All Levels • Monetization Focused</p>
+          </div>
+          <div class="course-card__body">
+            <p class="course-desc">Launch, grow, and monetize your YouTube channel with proven automation strategies, SEO, and content systems.</p>
+            <div class="course-meta">
+              <div class="course-price"><s>$60</s> $50</div>
+              <button class="course-enroll" aria-label="Enroll in YouTube Mastery course">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card course-card--des reveal" itemscope itemtype="https://schema.org/Course">
+          <div class="course-card__top">
+            <div class="course-emoji" aria-hidden="true">🎨</div>
+            <h3 class="course-title" itemprop="name">Graphic Design Secrets</h3>
+            <p class="course-level">Beginner to Pro • Practical Skills</p>
+          </div>
+          <div class="course-card__body">
+            <p class="course-desc">From zero to professional — learn Canva, Adobe tools, and design principles that clients actually pay for.</p>
+            <div class="course-meta">
+              <div class="course-price"><s>$40</s> $30</div>
+              <button class="course-enroll" aria-label="Enroll in Graphic Design course">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div style="text-align:center;margin-top:2rem" class="reveal">
+        <a href="https://showcase.nextstepsols.com/store/" class="btn-ghost" aria-label="View all digital courses">View All Courses</a>
+      </div>
+    </section>
+
+    <!-- ✅ TESTIMONIALS -->
+    <section class="testimonials" aria-labelledby="testi-heading">
+      <div class="testimonials__inner">
+        <div class="section-header reveal">
+          <p class="section-kicker">Client Stories</p>
+          <h2 class="section-title" id="testi-heading">Trusted by <em>Thousands.</em></h2>
+          <p class="section-subtitle">Real results from real people who transformed their beauty routines and digital careers.</p>
+        </div>
+        <div class="testimonials-grid reveal-stagger">
+
+          <blockquote class="testi-card reveal" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-text" itemprop="reviewBody">"The Tea Tree hair oil completely transformed my scalp health. I've tried so many products and this is genuinely the first one that worked. And knowing it's 100% chemical-free makes it even better."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">FA</div>
+              <div>
+                <div class="testi-name" itemprop="author">Fatima A.</div>
+                <div class="testi-role">Beauty Customer, Lahore</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="testi-card reveal" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-text" itemprop="reviewBody">"The YouTube Mastery course is absolutely packed with value. I started applying the strategies in week one and saw a 300% increase in my channel views. Best investment I made this year."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">ZK</div>
+              <div>
+                <div class="testi-name" itemprop="author">Zain K.</div>
+                <div class="testi-role">Course Student, Karachi</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="testi-card reveal" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-text" itemprop="reviewBody">"Their branding and website design service is world-class. The team understood my vision perfectly and delivered a brand identity that has doubled my client inquiries."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" aria-hidden="true">SR</div>
+              <div>
+                <div class="testi-name" itemprop="author">Sara R.</div>
+                <div class="testi-role">Service Client, Islamabad</div>
+              </div>
+            </div>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ SERVICES SECTION -->
+    <section class="services-section" id="services" aria-labelledby="services-heading">
+      <div class="services-inner">
+        <div class="section-header reveal">
+          <p class="section-kicker">Grow Your Brand</p>
+          <h2 class="section-title" id="services-heading">Expert <em>Digital Services.</em></h2>
+          <p class="section-subtitle">Professional solutions that help your business attract clients, rank on Google, and convert visitors.</p>
+        </div>
+        <div class="services-grid">
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">🔍</div>
+            <h3 class="service-name">SEO & Digital Marketing</h3>
+            <p class="service-desc">Full-scale SEO audits, keyword strategies, content plans, and paid ad management to dominate your market online.</p>
+            <a href="https://showcase.nextstepsols.com/product/full-scale-digital-marketing-seo-strategy/" class="service-link" aria-label="Learn more about SEO services">Learn More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">💻</div>
+            <h3 class="service-name">Website Design & Dev</h3>
+            <p class="service-desc">Professional, conversion-optimized websites built with speed, SEO, and stunning visuals — ready to impress from day one.</p>
+            <a href="https://showcase.nextstepsols.com/product/professional-website-design-development/" class="service-link" aria-label="Learn more about website design">Learn More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h3 class="service-name">Corporate Branding</h3>
+            <p class="service-desc">Logo design, letterheads, visiting cards, social media banners — a complete brand identity that speaks premium.</p>
+            <a href="https://showcase.nextstepsols.com/product/professional-corporate-letterhead-envelope-design/" class="service-link" aria-label="Learn more about branding services">Learn More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">▶️</div>
+            <h3 class="service-name">YouTube Thumbnail Design</h3>
+            <p class="service-desc">High-CTR YouTube thumbnails designed to stop the scroll, drive clicks, and grow your channel faster.</p>
+            <a href="https://showcase.nextstepsols.com/product/high-ctr-youtube-thumbnail-design/" class="service-link" aria-label="Learn more about thumbnail design">Learn More →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">📱</div>
+            <h3 class="service-name">Social Media Banners</h3>
+            <p class="service-desc">Eye-catching, on-brand social media visuals for Facebook, Instagram, LinkedIn — built to increase engagement.</p>
+            <a href="https://showcase.nextstepsols.com/store/" class="service-link">Learn More →</a>
+          </div>
+
+          <div class="service-card reveal" style="background:var(--charcoal);border-color:transparent">
+            <div class="service-icon" style="background:rgba(200,169,110,.2)" aria-hidden="true">💬</div>
+            <h3 class="service-name" style="color:#fff">Get a Custom Quote</h3>
+            <p class="service-desc" style="color:rgba(255,255,255,.5)">Have a unique project? Let's talk. We craft tailored solutions for businesses of all sizes and budgets.</p>
+            <a href="https://wa.me/923235658791?text=Hello!%20I%20have%20a%20question%20about%20your%20services" class="btn-primary" style="font-size:.72rem;padding:10px 20px;margin-top:.5rem;display:inline-flex" aria-label="Contact via WhatsApp">WhatsApp Us →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ NEWSLETTER SECTION -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter__inner">
+        <div class="newsletter__icon" aria-hidden="true">✉️</div>
+        <div class="section-header">
+          <p class="section-kicker">Join The Inner Circle</p>
+          <h2 class="section-title" id="newsletter-heading">Get <em>Early Access</em> &amp; Exclusive Offers.</h2>
+          <p class="section-subtitle">First dibs on new product drops, exclusive digital assets, and community sale prices. No spam — ever.</p>
+        </div>
+        <form class="newsletter__form" aria-label="Email newsletter signup">
+          <label for="email-input" class="sr-only">Email address</label>
+          <input type="email" id="email-input" class="newsletter__input" placeholder="Enter your email address" autocomplete="email" required aria-required="true" />
+          <button type="submit" class="btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+        <p class="newsletter__note">🔒 100% private. Unsubscribe anytime. No spam, just value.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ FOOTER: Semantic, accessible, SEO-friendly -->
+  <footer role="contentinfo" id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <!-- Brand Column -->
+        <div>
+          <p class="footer-brand__name">Bint e Anwar Hub</p>
+          <p class="footer-brand__tagline">Bridging classic craftsmanship with digital innovation — curating unique essentials to simplify your lifestyle and elevate your digital workspace.</p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="https://www.facebook.com/samanbinteanwar" class="footer-social" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/saman_anwar90" class="footer-social" aria-label="Instagram">in</a>
+            <a href="https://www.youtube.com/@binteanwarhub" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="https://www.tiktok.com/@saman.anwar76" class="footer-social" aria-label="TikTok">tt</a>
+            <a href="https://www.linkedin.com/in/suman-anwar-4333ba340/" class="footer-social" aria-label="LinkedIn">li</a>
+            <a href="https://www.pinterest.com/binteanwar790/" class="footer-social" aria-label="Pinterest">P</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <nav aria-label="Footer quick links">
+          <p class="footer-col__title">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="https://showcase.nextstepsols.com/">Home</a></li>
+            <li><a href="https://showcase.nextstepsols.com/store/">Store</a></li>
+            <li><a href="https://showcase.nextstepsols.com/about-us/">About Us</a></li>
+            <li><a href="https://showcase.nextstepsols.com/contact-us-2/">Contact Us</a></li>
+            <li><a href="https://showcase.nextstepsols.com/account/">My Account</a></li>
+          </ul>
+        </nav>
+
+        <!-- Legal Links -->
+        <nav aria-label="Footer legal links">
+          <p class="footer-col__title">Legal</p>
+          <ul class="footer-links">
+            <li><a href="https://showcase.nextstepsols.com/privacy-and-policy/">Privacy Policy</a></li>
+            <li><a href="https://showcase.nextstepsols.com/terms-conditions/">Terms & Conditions</a></li>
+            <li><a href="https://showcase.nextstepsols.com/account/orders/">Orders</a></li>
+            <li><a href="https://showcase.nextstepsols.com/wishlist/">Wishlist</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer-col__title">Contact Us</p>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">✉</span>
+            <a href="mailto:binteanwar31@gmail.com" class="footer-contact-text" aria-label="Email us">binteanwar31@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">💬</span>
+            <a href="https://wa.me/923235658791" class="footer-contact-text" aria-label="WhatsApp us">+92 323 565 8791</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">💬</span>
+            <a href="https://wa.me/923184719162" class="footer-contact-text" aria-label="WhatsApp alternate">+92 318 471 9162</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Bint e Anwar Hub. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="https://showcase.nextstepsols.com/privacy-and-policy/">Privacy</a>
+          <a href="https://showcase.nextstepsols.com/terms-conditions/">Terms</a>
+          <a href="https://showcase.nextstepsols.com/sitemap_index.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ WhatsApp FAB -->
+  <a href="https://wa.me/923235658791?text=Hello!%20I%20have%20a%20question%20about%20my%20order%20from%20Binteanwar%20Hub." class="whatsapp-fab" aria-label="Chat on WhatsApp" rel="noopener noreferrer" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Screen reader only utility -->
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+
+  <script>
+    // ============================
+    // NAVBAR SCROLL BEHAVIOR
+    // ============================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ============================
+    // MOBILE MENU
+    // ============================
+    function openMobileMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.getElementById('mobileOverlay').classList.add('open');
+      document.getElementById('hamburger').setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('mobileOverlay').classList.remove('open');
+      document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // ============================
+    // SCROLL REVEAL (Intersection Observer)
+    // ============================
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // For stagger containers, observe children
+    document.querySelectorAll('.reveal-stagger').forEach(container => {
+      const children = container.children;
+      Array.from(children).forEach((child, i) => {
+        child.style.transitionDelay = `${i * 0.1}s`;
+        child.classList.add('reveal');
+        revealObserver.observe(child);
+      });
+    });
+
+    // ============================
+    // NEWSLETTER FORM
+    // ============================
+    const newsletterForm = document.querySelector('.newsletter__form');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('email-input');
+        const btn = newsletterForm.querySelector('button[type="submit"]');
+        if (emailInput.value && emailInput.validity.valid) {
+          btn.textContent = '✓ Subscribed!';
+          btn.style.background = '#4CAF50';
+          btn.style.borderColor = '#4CAF50';
+          emailInput.value = '';
+          setTimeout(() => {
+            btn.textContent = 'Subscribe';
+            btn.style.background = '';
+            btn.style.borderColor = '';
+          }, 3000);
+        }
+      });
+    }
+
+    // ============================
+    // PRODUCT ADD TO CART (UI FEEDBACK)
+    // ============================
+    document.querySelectorAll('.product-add-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const original = this.textContent;
+        this.textContent = '✓ Added!';
+        this.style.background = '#4CAF50';
+        setTimeout(() => {
+          this.textContent = original;
+          this.style.background = '';
+        }, 2000);
+      });
+    });
+
+    // ============================
+    // COURSE ENROLL (UI FEEDBACK)
+    // ============================
+    document.querySelectorAll('.course-enroll').forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.location.href = 'https://showcase.nextstepsols.com/store/';
+      });
+    });
+  </script>
+
+</body>
+</html>
